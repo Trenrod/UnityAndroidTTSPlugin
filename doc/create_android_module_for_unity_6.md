@@ -29,8 +29,8 @@ This module will then be exported as `AAR` file and used in unity.
 - `Alt-\` -> `File` -> `New` -> `New Module...`
 - In `Create new Module`. Select `Android librarby`
 - On the right side configute:
-  - Module name: *AndroidTSSPlugin*
-  - Package name: *com.trenrod.unity.androidtssplugin*
+  - Module name: *AndroidTTSPlugin*
+  - Package name: *com.trenrod.unity.AndroidTTSPlugin*
   - Language: *Kotlin*
   - Minimum SDK: *API 23 ("Marshmallow"; Android 6.0)* <-- This is required by Unity 6
   - Build Configuration Language: *Kotlin DSL ...*
@@ -42,16 +42,23 @@ This module will then be exported as `AAR` file and used in unity.
 - Open Terminal (`Alt+F12`)
 - Test if build is working type: `.\gradlew build -x test` to run build without tests.
 - Test if module can be created type: `.\gradlew assembleDebug`
-- Check if `AndroidTSSPlugin-debug.aar` has been created
+- Check if `AndroidTTSPlugin-debug.aar` has been created
   - Still in terminal execute `explorer .`
-  - Goto `AndroidTSSPlugin\build\outputs\aar` look for `AndroidTSSPlugin-debug.aar`
+  - Goto `AndroidTTSPlugin\build\outputs\aar` look for `AndroidTTSPlugin-debug.aar`
 
 ## Implement a TTS Module
 
-We will create a Class called `AndroidTTSPlugin` inside AndroidTSSPlugin which offers a function `readText`.
+We will create a Class called `AndroidTTSPlugin` inside AndroidTTSPlugin which offers a function `readText`.
 
-
+- As requested in the [API reference TextToSpeech](https://developer.android.com/reference/kotlin/android/speech/tts/TextToSpeech) declare `android.speech.tts.TextToSpeech.Engine#INTENT_ACTION_TTS_SERVICE` in the queries element of `UnityAndroidTTSPlugin\UnityPlugin\AndroidTTSPlugin\src\main\AndroidManifest.xml`.
+- The result should look like this file: [AndroidManifest.xml](../UnityPlugin/AndroidTTSPlugin/src/main/AndroidManifest.xml)
+- Create class to use TTS. `Right-Click` on `AndroidTTSPlugin -> kotlin+java -> com.trenrod.unity.androidttsplugin` on the left side file explorer view. Then `New` -> `Kotlin class/file`.
+- In `New Kotlin Class/File`. Select `Class` and name it `TTSPlugin`.
+- Checkout the detailed comments in [TTSPlugin](../UnityPlugin/AndroidTTSPlugin/src/main/java/com/trenrod/unity/androidttsplugin/TTSPlugin.kt) about the implementation.
 
 ## Test Unity Android TTS Module
 
 We will adjust the initial `Empty View Actity` to use our created Module to test it.
+
+
+TODO

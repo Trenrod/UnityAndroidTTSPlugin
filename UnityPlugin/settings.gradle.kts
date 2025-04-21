@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "UnityPlugin"
 include(":app")
-include(":AndroidTSSPlugin")
+include(":AndroidTTSPlugin")

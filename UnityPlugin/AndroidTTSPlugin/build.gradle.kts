@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.trenrod.unity.androidtssplugin"
+    namespace = "com.trenrod.unity.androidttsplugin"
     compileSdk = 35
 
     defaultConfig {

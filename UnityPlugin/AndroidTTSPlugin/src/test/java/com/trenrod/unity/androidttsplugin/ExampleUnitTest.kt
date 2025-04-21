@@ -1,4 +1,4 @@
-package com.trenrod.unity.androidtssplugin
+package com.trenrod.unity.androidttsplugin
 
 import org.junit.Test
 

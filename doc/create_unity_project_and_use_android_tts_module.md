@@ -26,7 +26,7 @@ On how to call Android AAR from C# Unity checkout. [Call Java and Kotlin plug-in
 - Create `Empty gameobject` by pressing `Cntr+Shit+N` and name it `TTSGameObject`
 - Create new Monobehavior in `Assets -> Scripts -> AndroidTTS`
 - Add `AndroitTTS.cs` file to `TTSGameObject`
-- 
+- Checkout [AndroitTTS.cs](../UnityExample/Assets/Scripts/AndroidTTS.cs) for detailed implementation
 
 
 

@@ -60,7 +60,7 @@ class TTSPlugin : TextToSpeech.OnInitListener {
      * @param tag The category or source of the log message
      * @param message The actual log message content
      */
-    private fun addLog(tag: String, message: String) {
+    public fun addLog(tag: String, message: String) {
         logs.add("$tag: $message")
     }
 

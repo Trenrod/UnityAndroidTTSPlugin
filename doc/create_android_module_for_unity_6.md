@@ -56,9 +56,19 @@ We will create a Class called `AndroidTTSPlugin` inside AndroidTTSPlugin which o
 - In `New Kotlin Class/File`. Select `Class` and name it `TTSPlugin`.
 - Checkout the detailed comments in [TTSPlugin](../UnityPlugin/AndroidTTSPlugin/src/main/java/com/trenrod/unity/androidttsplugin/TTSPlugin.kt) about the implementation.
 
-## Test Unity Android TTS Module
+## Test Unity Android TTS Module in Android Studio emulator
 
-We will adjust the initial `Empty View Actity` to use our created Module to test it.
+We will adjust the initial `Empty View Actity` to use our created Module to test it. 
 
+This allows us to quickly test our Module before implementing the Unity part.
 
-TODO
+- Make the module available in our Main App (UnityPlugin/app)
+	- Open `Project structure` view with `Alt+\ -> File -> Project structure`
+	- Select `Dependencies`. 
+	- Select `app` under `Modules`.
+	- Select `+` under `Declared Dependencies`
+	- Select `3 Module Dependency` 
+	- In the `Add Module Dependency` View. Select `AndroidTTSPlugin` and press `OK`
+	- Back in `Project structure` view press `Apply` and once applied press `OK`
+- Checkout simple UI (logview and button) to allow testing our Module [activity_main.xml](`../UnityPlugin\app\src\main\res\layout\activity_main.xml`)
+- Checkout the detailed comments in [activity_main.xml](../UnityPlugin/app/src/main/java/com/trenrod/unity/unityplugin/MainActivity.kt) on how to use the Module.
